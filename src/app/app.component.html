@@ -73,7 +73,7 @@
                                 {{ todo.createdAt | date:'dd.MM.yyyy HH:mm' }}
                             </span>
                             <div class="priority-buttons">
-                                <button *ngFor="let priority of ['low', 'medium', 'high']" [style.background-color]="getPriorityColor(priority)" [class.active]="todo.priority === priority" (click)="updateTodoPriority(todo, priority)">
+                                                                <button *ngFor="let priority of priorities" [style.background-color]="getPriorityColor(priority)" [class.active]="todo.priority === priority" (click)="updateTodoPriority(todo, priority)">
                                     {{ priority === 'low' ? 'Низький' : priority === 'medium' ? 'Середній' : 'Високий' }}
                                 </button>
                             </div>

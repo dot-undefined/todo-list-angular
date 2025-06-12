@@ -20,6 +20,7 @@ export class AppComponent {
   filterStatus: 'all' | 'active' | 'completed' = 'all';
   sortBy: 'priority' | 'date' = 'date';
   searchQuery = '';
+  priorities: ('low' | 'medium' | 'high')[] = ['low', 'medium', 'high'];
 
   constructor() {
     // Load todos from localStorage on init
